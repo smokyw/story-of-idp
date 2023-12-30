@@ -1,0 +1,30 @@
+{
+  "name": "@lautr/initium-nuxt-alpha",
+  "private": true,
+  "scripts": {
+    "preview": "nuxt preview",
+    "dev": "nuxi dev",
+    "start": "nuxi start",
+    "coverage": "vitest run --coverage",
+    "postinstall": "nuxi prepare",
+    "test": "vitest run",
+    "ci:test": "vitest run",
+    "ci:smoke": "pnpm dlx concurrently -k -s first -n \"NUXT,TEST\" -c \"magenta,blue\" \"pnpm dev\" \"pnpm dlx wait-on tcp:3000 && pnpm echo \"pass\" \""
+  },
+  "dependencies": {
+    "@lautr/initium-nuxt-design": "workspace:*",
+    "@nuxtjs/tailwindcss": "6.10.3"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "1.0.6",
+    "@nuxt/test-utils-edge": "3.3.3-28007403.1fd491f1",
+    "@nuxtjs/color-mode": "3.3.2",
+    "@pinia/nuxt": "0.5.1",
+    "@vue-macros/nuxt": "1.9.18",
+    "@vueuse/nuxt": "10.7.1",
+    "autoprefixer": "10.4.16",
+    "nuxt": "3.8.0",
+    "pinia": "2.1.7",
+    "vitest": "0.34.6"
+  }
+}

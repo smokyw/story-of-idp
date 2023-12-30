@@ -1,0 +1,25 @@
+{
+  "name": "@lautr/initium-nuxt",
+  "version": "1.0.0",
+  "packageManager": "pnpm@8.13",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "lint": "pnpm eslint .",
+    "webapp": "pnpm --filter @lautr/initium-nuxt-webapp",
+    "design": "pnpm --filter @lautr/initium-nuxt-design",
+    "dev": "concurrently \"pnpm design dev\" \"pnpm webapp dev\""
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.43.1",
+    "concurrently": "8.2.2",
+    "eslint": "8.56.0",
+    "typescript": "5.3.3"
+  },
+  "volta": {
+    "node": "18.19.0"
+  }
+}
